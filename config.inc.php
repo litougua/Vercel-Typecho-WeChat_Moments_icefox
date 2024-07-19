@@ -34,15 +34,12 @@ require_once 'Typecho/Common.php';
 Typecho_Common::init();
 
 /** 定义数据库参数 */
-$db = new Typecho_Db($_ENV["TYPECHO_ADAPTER_NAME"], $_ENV["TYPECHO_PREFIX"]);
+$db = new \Typecho\Db('Pdo_Pgsql', 'typecho_');
 $db->addServer(array(
     'host' => $_ENV["TYPECHO_HOST"],
     'user' => $_ENV["TYPECHO_USERNAME"],
     'password' => $_ENV["TYPECHO_PASSWORD"],
-    'charset' => $_ENV["TYPECHO_CHARSET"],
     'port' => $_ENV["TYPECHO_PORT"],
     'database' => $_ENV["TYPECHO_DATABASE"],
-    'engine' => $_ENV["TYPECHO_ENGINE"],
-    'sslCa' => dirname(__FILE__) . '/' . $_ENV["TYPECHO_SSL_CA"],
 ), Typecho_Db::READ | Typecho_Db::WRITE);
 Typecho_Db::set($db);
