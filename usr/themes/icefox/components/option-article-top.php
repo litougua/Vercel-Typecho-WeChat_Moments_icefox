@@ -197,7 +197,7 @@ foreach ($topCids as $key => $value) {
                 </div>
             </section>
             <!--评论列表-->
-            <section class="break-all">
+            <section class="break-all">                
                 <?php
                 $agreeNum = getAgreeNumByCid($topArticle['cid']);
                 $agree = $agreeNum['agree'];

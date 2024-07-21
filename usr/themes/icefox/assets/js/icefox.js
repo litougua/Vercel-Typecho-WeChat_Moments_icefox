@@ -16,12 +16,12 @@ let lazyLoadInstance = new LazyLoad({
 });
 
 function printCopyright() {
-    console.log('%cIcefox主题 By xiaopanglian v2.0.0 beta %chttps://0ru.cn', 'color: white;  background-color: #99cc99; padding: 10px;', 'color: white; background-color: #ff6666; padding: 10px;');
+    console.log('%cIcefox主题 By xiaopanglian v1.9.2 %chttps://0ru.cn', 'color: white;  background-color: #99cc99; padding: 10px;', 'color: white; background-color: #ff6666; padding: 10px;');
 }
 
 window.onload = async () => {
     // 网站接口请求地址前缀
-    globalData.webSiteHomeUrl = document.querySelector('.webSiteHomeUrl')?.value;
+    globalData.webSiteHomeUrl = document.querySelector('.webSiteHomeUrl').value;
     if (document.querySelector('._currentPage')) {
         globalData.loadMorePage = parseInt(document.querySelector('._currentPage').value);
     }
@@ -135,8 +135,6 @@ window.onload = async () => {
             $('#top-fixed').addClass('backdrop-blur-md');
             $("#friend-light").addClass('hidden');
             $("#friend-dark").removeClass('hidden');
-            $("#edit-light").addClass('hidden');
-            $("#edit-dark").removeClass('hidden');
             $("#back-light").addClass('hidden');
             $("#back-dark").removeClass('hidden');
             $("#top-play-light").addClass('hidden');
@@ -152,8 +150,6 @@ window.onload = async () => {
             $('#top-fixed').removeClass('backdrop-blur-md');
             $("#friend-light").removeClass('hidden');
             $("#friend-dark").addClass('hidden');
-            $("#edit-light").removeClass('hidden');
-            $("#edit-dark").addClass('hidden');
             $("#back-light").removeClass('hidden');
             $("#back-dark").addClass('hidden');
             $("#top-play-light").removeClass('hidden');
